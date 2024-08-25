@@ -2,12 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\ClienteController;
 
 Route::resource('produtos', ProdutoController::class);
 
 Route::get('/produtos/create', [ProdutoController::class, 'create'])->name('produtos.create');
 Route::post('/produtos', [ProdutoController::class, 'store'])->name('produtos.store');
-
+Route::resource('clientes', ClienteController::class);
+Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
 
 /*
 |--------------------------------------------------------------------------
