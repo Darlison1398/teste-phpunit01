@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\NotaCompraController;
 
 Route::resource('produtos', ProdutoController::class);
 
@@ -10,6 +11,8 @@ Route::get('/produtos/create', [ProdutoController::class, 'create'])->name('prod
 Route::post('/produtos', [ProdutoController::class, 'store'])->name('produtos.store');
 Route::resource('clientes', ClienteController::class);
 Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
+Route::get('notas/criar', [NotaCompraController::class, 'create'])->name('notas.create');
+Route::post('notas', [NotaCompraController::class, 'store'])->name('notas.store');
 
 /*
 |--------------------------------------------------------------------------

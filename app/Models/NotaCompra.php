@@ -15,4 +15,16 @@ class NotaCompra extends Model
         'data', 
         'total'
     ];
+
+    // Relacionamento com Cliente
+    public function cliente()
+    {
+        return $this->belongsTo(Cliente::class, 'clienteId');
+    }
+
+    // Relacionamento com Produto
+    public function produto()
+    {
+        return $this->belongsTo(Produto::class, 'produtoId');
+    }
 }

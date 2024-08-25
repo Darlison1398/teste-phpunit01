@@ -5,3 +5,8 @@
 
 ==> mudando o foco do sistema para o banco específico de testes 
     - php artisan migrate --env=testing 
+
+==> para voltar a usar o banco real, e não o banco de testes 
+    - php artisan migrate
+
+
